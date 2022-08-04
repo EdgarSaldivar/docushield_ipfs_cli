@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  docushield:
+    image: ipfs/kubo
+    container_name: docushield
+    volumes:
+      - /mnt/storage/docushield/export:/export
+      - /mnt/storage/docushield/data/ipfs:/ipfs
+    ports:
+      - 4013:4001
+      - 8013:8080
+      - 8014:8081
+      - 5013:5001
+    environment:
+      IPFS_PROFILE: server
+      IPFS_PATH: /ipfs
+    restart: unless-stopped
