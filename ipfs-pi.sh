@@ -12,5 +12,6 @@ sudo docker-compose exec docushield ipfs daemon
 sudo docker-compose exec docushield ipfs bootstrap rm all
 sudo docker-compose exec docushield ipfs bootstrap add /ip4/18.144.165.94/tcp/4001/p2p/12D3KooWPXYoBXU5RFYRnhGpnDycW1FZM7hHQehdZjux96nVhQmu
 sudo docker-compose restart docushield
+sudo docker-compose exec docushield ipfs id
 
 # :)
